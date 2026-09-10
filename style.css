@@ -1,0 +1,59 @@
+:root 
+{
+--backgruond-color: #c7e4f7; 
+--text-color: #0b324b;
+--navBackground: #C4F7CA;
+--footBackground: #92EEFF;
+--imgBorder: #0b324b;
+}
+
+body 
+{
+    background-color: var(--backgruond-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+    min-height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+p
+{
+    color: var(--text-color)
+}
+
+nav {
+background-color: var(--navBackground);
+    padding: 5px ;
+    width: fit-content;
+}
+
+nav p
+{
+
+    display: inline;
+    margin-right: 1em;
+}
+
+footer {
+margin-top: auto;
+background-color: var(--footBackground);
+width: fit-content;
+padding: 1em;
+}
+
+img {
+
+    border: 3px solid var(--imgBorder);
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+/*
+farve paleteen til min hjemmesider 
+30AFFF
+92EEFF
+D8FFC5
+C4F7CA
+*/
