@@ -1,59 +1,112 @@
-:root 
-{
---backgruond-color: #c7e4f7; 
---text-color: #0b324b;
---navBackground: #C4F7CA;
---footBackground: #92EEFF;
---imgBorder: #0b324b;
+:root {
+    --backgruond-color: #c7e4f7;
+    --text-color: #0b324b;
+    --navBackground: #C4F7CA;
+    --footBackground: #92EEFF;
+    --imgBorder: #0b324b;
 }
 
-body 
-{
+body {
     background-color: var(--backgruond-color);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-
-    min-height: 75%;
+    font-size: medium;
+    margin: 0;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
 
-p
+.container
 {
-    color: var(--text-color)
+    width: 90%; /* indholdet fylder kun 80% af skærmen */
+    margin: 30px auto;
+}
+
+.text-content {
+    max-width:max-content;
+    margin: 0 auto;
+}
+
+h1, h2
+{
+    color: var(--text-color);
+}
+p {
+    color: var(--text-color);
 }
 
 nav {
-background-color: var(--navBackground);
-    padding: 5px ;
-    width: fit-content;
+    display: flex;
+    background-color: var(--navBackground);
+    padding: 2px;
+    width: 100%;
+    justify-content: center;
+    border: 2px solid var(--imgBorder);
+    gap: 3px;
 }
 
-nav p
-{
+nav a:hover {
+    background: #C4F7CA;
+    border: 1px dotted var(--text-color);
+}
 
+nav a.active {
+    background: #1976d2;
+}
+
+nav p {
     display: inline;
     margin-right: 1em;
 }
 
 footer {
-margin-top: auto;
-background-color: var(--footBackground);
-width: fit-content;
-padding: 1em;
+    display: flex;
+    margin-top: auto;
+    background-color: var(--footBackground);
+    padding: 1em;
+    width: 100%;
+    justify-content: center;
+    border: 2px solid var(--imgBorder);
+    box-sizing: border-box;
 }
 
 img {
-
     border: 3px solid var(--imgBorder);
     border-radius: 10px;
     margin-top: 1%;
 }
 
+.image-grid
+{
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 2fr));
+    gap: 35px;
+}
+
+.image-grid img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+    .image-grid {
+       grid-template-columns: repeat(3, minmax(200px, 2fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(3, minmax(200px, 2fr));
+    }
+}
 /*
-farve paleteen til min hjemmesider 
-30AFFF
-92EEFF
-D8FFC5
-C4F7CA
+Farvepalette til hjemmesiden:
+#30AFFF
+#92EEFF
+#D8FFC5
+#C4F7CA
 */
