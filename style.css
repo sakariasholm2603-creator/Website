@@ -144,6 +144,22 @@ td a:hover {
 }
 
 
+.moxfield-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--navBackground);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.moxfield-link:hover {
+    background-color: #D8FFC5;
+}
+
+
 
 /*
 Farvepalette til hjemmesiden:
