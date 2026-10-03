@@ -97,6 +97,11 @@ img {
 }
 
 
+@media (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(3, minmax(200px, 2fr));
+    }
+}
 
 @media (max-width: 768px) {
     .image-grid {
@@ -104,10 +109,38 @@ img {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 375px) {
     .image-grid {
        grid-template-columns: repeat(1, minmax(200px, 2fr));
     }
+}
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 2px solid var(--text-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--navBackground);
+}
+
+td a {
+    color: var(--text-color);
+}
+
+td a:hover {
+    font-weight: bold;
 }
 
 
