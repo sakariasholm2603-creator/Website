@@ -73,8 +73,10 @@ footer {
 
 img {
     border: 3px solid var(--imgBorder);
+    
     border-radius: 10px;
     margin-top: 1%;
+    
 }
 
 .image-grid
@@ -93,11 +95,7 @@ img {
     box-sizing: border-box;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
+
 
 @media (max-width: 768px) {
     .image-grid {
